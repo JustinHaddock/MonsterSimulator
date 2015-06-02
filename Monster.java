@@ -10,9 +10,9 @@ public class Monster{
 	public boolean alive;
 	public Random rand = new Random();
 
-	public Monster(String name, String effect, int health, int damage){
+	public Monster(String name, int health, int dmgLow, int dmbHigh){
 		this.name = name;
-		this.effect = effect;
+		this.effect = "NONE";
 		this.health = health;
 		this.dmgLow = dmgLow;
 		this.dmgHigh = dmgHigh;

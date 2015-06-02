@@ -1,6 +1,6 @@
 public class Dagger extends Weapon{
 
-	public Dagger(int dmgHigh, int dmgLow){
+	public Dagger(){
 		super(5, 10);
 	}
 

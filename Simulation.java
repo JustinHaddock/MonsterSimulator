@@ -1,21 +1,49 @@
+import java.util.Random;
+import java.util.ArrayList;
+
 public class Simulation{
-	public ArrayList<Person> Warriors;
-	public Monster monster;
-	public ArrayList<Weapons> = weapons;
-	public int warriorNum = 50;
+	public static ArrayList<Person> warriors;
+	public static Monster monster;
+	public static ArrayList<Weapon>  weapons;
+	public static int warriorNum = 50;
+	public static Random rand = new Random();
 
 
-
-	public void initializeWarriors(int warriorNum){
+	public static void initializeWarriors(int warriorNum){
 		for (int i = 0; i < warriorNum; i++){
-			Warriors.add(new Person(i, getWeapon(), getHealth()));
+			warriors.add(new Person(i, getWeapon(), 50));
 		}
 
 	}
+	public static void initializeMonster(){
+		monster = new Monster("Nessie",100, 10, 50); 
+	}
+
+	public static void initializeWeapons(){
+		Dagger d = new Dagger();
+		Mace m = new Mace();
+		weapons.add(d);
+		weapons.add(m);
+	}
+
+	public static Weapon getWeapon(){
+		int low = 0;
+		int high = weapons.size() - 1;
+		return weapons.get(getRandomNum(low, high));
+	}
+
+	public static int getRandomNum(int low, int high){
+		return rand.nextInt((high - low) +1) +low;
+	}
+
 	public static void main(String args[]){
-		initializeWarriors(warriorNum);
 		initializeMonster();
 		initializeWeapons();
+		initializeWarriors(warriorNum);
+		
+		for (Person warr : warriors){
+			System.out.println("Success");
+		}
 	}
 
 

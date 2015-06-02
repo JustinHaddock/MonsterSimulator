@@ -1,6 +1,6 @@
 public class Mace extends Weapon{
 
-	public Mace(int dmgHigh, int dmgLow){
+	public Mace(){
 		super(5, 10);
 	}
 
