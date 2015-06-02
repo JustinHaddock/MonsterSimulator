@@ -2,9 +2,9 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class Simulation{
-	public static ArrayList<Person> warriors;
+	public static ArrayList<Person> warriors = new ArrayList<>();
 	public static Monster monster;
-	public static ArrayList<Weapon>  weapons;
+	public static ArrayList<Weapon>  weapons = new ArrayList<>();
 	public static int warriorNum = 50;
 	public static Random rand = new Random();
 
