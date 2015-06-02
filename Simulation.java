@@ -42,8 +42,12 @@ public class Simulation{
 		initializeWarriors(warriorNum);
 		
 		for (Person warr : warriors){
-			System.out.println("Success");
+			fight(warr, monster);
 		}
+	}
+
+	pubic void fight(Person warr, Monster mon){
+		
 	}
 
 
