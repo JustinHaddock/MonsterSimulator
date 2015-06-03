@@ -13,6 +13,7 @@ public class Mace extends Weapon{
 	}
 
 	public String getEffect(){
-		return "Blunt";
+		return "DIZZY";
 	}
+
 }

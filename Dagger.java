@@ -13,6 +13,6 @@ public class Dagger extends Weapon{
 	}
 	
 	public String getEffect(){
-		return "Bleeding";
+		return "BLEEDING";
 	}
 }
