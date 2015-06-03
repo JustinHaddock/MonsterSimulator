@@ -10,13 +10,13 @@ public class Simulation{
 
 
 	public static void initializeWarriors(int warriorNum){
-		for (int i = 0; i < warriorNum; i++){
-			warriors.add(new Person(i, getWeapon(), 50));
+		for (int i = 1; i <= warriorNum; i++){
+			warriors.add(new Person(i, getWeapon(), 20));
 		}
 
 	}
 	public static void initializeMonster(){
-		monster = new Monster("Nessie",100, 10, 50); 
+		monster = new Monster("Nessie",1000, 10, 20); 
 	}
 
 	public static void initializeWeapons(){
@@ -36,18 +36,36 @@ public class Simulation{
 		return rand.nextInt((high - low) +1) +low;
 	}
 
+	public static boolean fight(Person warr, Monster mon){
+		while(warr.alive && mon.alive){
+			warr.attack(mon);
+			mon.attack(warr);
+			System.out.println("--------------------------------------");
+		}
+		if (mon.alive == false){
+			win(warr);
+			return false;
+		}
+		return true;
+	}
+
+	public static void win(Person winrar){
+		System.out.println("\n\nHumans win!");
+		System.out.println("It only took " + winrar.getName() + " People!\n");
+	}
+
 	public static void main(String args[]){
 		initializeMonster();
 		initializeWeapons();
 		initializeWarriors(warriorNum);
 		
 		for (Person warr : warriors){
-			fight(warr, monster);
+			boolean cont = fight(warr, monster);
+			if (cont){}
+			else{
+				break;
+			}
 		}
-	}
-
-	pubic void fight(Person warr, Monster mon){
-		
 	}
 
 

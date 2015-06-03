@@ -1,7 +1,7 @@
 public class Mace extends Weapon{
 
 	public Mace(){
-		super(5, 10);
+		super(15, 25);
 	}
 
 	public int getHits(){

@@ -10,18 +10,18 @@ public class Monster{
 	public boolean alive;
 	public Random rand = new Random();
 
-	public Monster(String name, int health, int dmgLow, int dmbHigh){
+	public Monster(String name, int health, int dmgLow, int dmgHigh){
 		this.name = name;
-		this.effect = "NONE";
 		this.health = health;
 		this.dmgLow = dmgLow;
 		this.dmgHigh = dmgHigh;
+		this.effect = "NONE";
 		this.alive = true;
 	}
 
 	public void attack(Person p){
 		int damage = getRandomNum(dmgLow, dmgHigh);
-		System.out.println("Monster " + name + " dealt " + Integer.toString(damage) + " to " + p.getName());
+		System.out.println("Monster " + name + " dealt " + Integer.toString(damage) + " to Warrior " + p.getName());
 		p.getHit(damage);
 	}
 

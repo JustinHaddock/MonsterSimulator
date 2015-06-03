@@ -1,11 +1,11 @@
 public class Dagger extends Weapon{
 
 	public Dagger(){
-		super(5, 10);
+		super(1, 6);
 	}
 
 	public int getHits(){
-		return super.getRandomNum(3, 6);
+		return super.getRandomNum(1, 4);
 	}
 
 	public String getName(){

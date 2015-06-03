@@ -4,12 +4,12 @@ public abstract class Weapon{
 	
 	public int dmgHigh;
 	public int dmgLow;
-	public Random rand;
+	public Random rand = new Random();
 
 	
-	public Weapon(int dmgHigh, int dmgLow){
-		this.dmgHigh = dmgHigh;
+	public Weapon(int dmgLow, int dmgHigh){
 		this.dmgLow = dmgLow;
+		this.dmgHigh = dmgHigh;
 	}
 
 	abstract int getHits();
